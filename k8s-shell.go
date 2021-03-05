@@ -7,7 +7,7 @@ import (
 )
 
 func main(){
-    cmd := exec.Command("/bin/bash", "-c", " kubectl  top node ;echo -----------------------;clock;sleep 1;  kubectl top pod -n websocket-master;kubectl top pod -n websocket-admin;kubectl top pod -n websocket-assist;kubectl top pod -n websocket-magic;clock;netstat -an | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'|grep --color . ;sleep 1; ")
+    cmd := exec.Command("/bin/bash", "-c", " kubectl  top node ;echo ---------------;clock;sleep 1;  kubectl top pod -n websocket-master;kubectl top pod -n websocket-admin;kubectl top pod -n websocket-assist;kubectl top pod -n websocket-magic;clock;netstat -an | awk '/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}'|grep --color . ;sleep 1; ")
 
     stdin, _ := cmd.StdinPipe()
     stdout, _ := cmd.StdoutPipe()
